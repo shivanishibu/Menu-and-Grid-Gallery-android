@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/pop_share"
+        android:title="Share Selected" />
+    <item
+        android:id="@+id/pop_delete"
+        android:title="Delete Selected" />
+    <item
+        android:id="@+id/pop_cancel"
+        android:title="Cancel Selection" />
+</menu>

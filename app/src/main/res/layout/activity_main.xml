@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Toolbar hosts the Options Menu (top-right overflow: Home / Select All / Show / Exit) -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:title="Menus &amp; WebView Demo"
+        android:titleTextColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Long-press a URL image for options. Tap to select multiple."
+        android:textSize="13sp" />
+
+    <!-- 3x3 GridView: 3 drawable + 3 phone-storage + 3 url images -->
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:numColumns="3"
+        android:horizontalSpacing="8dp"
+        android:verticalSpacing="8dp"
+        android:padding="8dp"
+        android:stretchMode="columnWidth" />
+
+    <!-- Vertical Popup Menu at the bottom, visible when multiple images are selected and stays there until unselected -->
+    <LinearLayout
+        android:id="@+id/layoutVerticalMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Multiple Selection Menu"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:paddingBottom="4dp"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/btnPopShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Share Selected"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="4dp" />
+
+        <Button
+            android:id="@+id/btnPopDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete Selected"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="4dp" />
+
+        <Button
+            android:id="@+id/btnPopCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel Selection"
+            android:backgroundTint="#CCCCCC"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <!-- Bottom bar: left icon = grid (this screen), right icon = open WebView. -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#EEEEEE"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnGrid"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:contentDescription="Grid" />
+
+        <ImageButton
+            android:id="@+id/btnWebView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@android:drawable/ic_menu_view"
+            android:contentDescription="WebView" />
+    </LinearLayout>
+
+</LinearLayout>
