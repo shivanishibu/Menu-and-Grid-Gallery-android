@@ -90,9 +90,8 @@ Exp81/
 
 ## Output
 
-![Application Output](screenshots/Screenshot1.png)
-![Application Output](screenshots/Screenshot2.png)
-![Application Output](screenshots/Screenshot3.png)
+![Application Output](screenshot/screenshot1.jpeg)
+![Application Output](screenshot/Screenshot2.jpeg)
 
 ## Result
 
